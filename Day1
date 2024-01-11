@@ -1,0 +1,7 @@
+# Create a program that swaps the values of two variables
+
+def swap_values(val1, val2):
+    val1, val2 = val2, val1 
+    return val1, val2
+
+print(swap_values("aq", 1))
