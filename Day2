@@ -1,0 +1,10 @@
+# Create a program to calculate the area of a circle given its radius
+
+def calculate_area_of_circle(r):
+    if type(r) == int or type(r) == float:
+        return math.pi*r*r
+    else:
+        return "Radius in not a number."
+
+# sample output
+print(calculate_area_of_circle(10))
