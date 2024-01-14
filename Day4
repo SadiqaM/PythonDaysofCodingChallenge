@@ -1,0 +1,13 @@
+# Write a program to find the sum of all elements in a list.
+
+def sum_of_all_elements(input):
+    sum = 0
+    for i in input:
+        if type(i)==int or type(i)==float:
+            sum += i
+    return sum
+
+# sample function call
+print(sum_of_all_elements(["This", "is", "a", "string"]))
+print(sum_of_all_elements(["This", 1, 3, "is", "a", "string", 4]))
+print(sum_of_all_elements([4, 4.0, -3]))
