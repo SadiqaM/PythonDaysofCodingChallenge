@@ -1,0 +1,13 @@
+# Write a program to find the maximum and minimum values in a list.
+
+def find_max_min(input):
+
+    if all(isinstance(e, (int, float)) for e in input) or all(isinstance(e, (str)) for e in input):
+        return  max(input), min(input)
+    else:
+        return "Please enter a list containing only numbers or only strings."
+
+# sample function call
+print(find_max_min(["a", "Hello", "at"]))
+print(find_max_min([1,10,30,29]))
+print(find_max_min(["test", 10,"", 30,29, "100"]))
