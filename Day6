@@ -1,0 +1,20 @@
+# Write a program to count the occurence of a specific  character in a string
+""" function takes 3 arguments 
+str_input :: input string
+char :: character to be found 
+ignore_case :: True if search is not case sensitive, defaults to false"""
+
+def count_char_in_string(str_input, char, ignore_case=False):
+    if type(str_input)== str and type(char)==str:
+        if ignore_case:
+            return str_input.lower().count(char.lower())
+        else:
+            return str_input.count(char)
+    else:
+        return "Please check the input values : Input string and character to find both should be valid strings."
+
+# sample function call
+print(count_char_in_string("Hello", "L", False))
+print(count_char_in_string("Hello This is a test to count T's", "T", True))
+print(count_char_in_string("Hello", 9))
+print(count_char_in_string(1234555555, 5))
