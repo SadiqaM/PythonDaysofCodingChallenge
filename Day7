@@ -1,0 +1,20 @@
+# Write a program to check if a number is positive, negative, or zero
+
+def check_num(num):
+    if type(num)==int or  type(num)==float:
+        if num == 0:
+            state = "Zero"
+        elif num > 0 :
+            state = "Positive"
+        else:
+            state = "Negative"
+        return f"The number {num} is {state}"
+    else:
+        return "Please enter valid input - integer or float"
+
+# Sample function call
+print(check_num("abc"))
+print(check_num(0))
+print(check_num(0.00))
+print(check_num(10))
+print(check_num(-3.0))
