@@ -1,0 +1,21 @@
+# Write a function that accepts a string and calculates the number of uppercase and lowercase letters in it.
+
+def count_letter_case(input_string):
+
+    if type(input_string) == str:
+        lowercase_count, uppercase_count = 0,0
+        for i in input_string.replace(" ", ""):
+            if i.islower():
+                lowercase_count += 1
+            else :
+               uppercase_count += 1
+        return f"The input string {input_string} contains {lowercase_count} lowercase letters and {uppercase_count} uppercase letters." 
+    else:
+        return "Enter valid string"
+    
+
+# Sample function call
+print(count_letter_case("This Is The Test"))
+print(count_letter_case("TTTT"))
+print(count_letter_case("aaaa"))
+print(count_letter_case(12345))
