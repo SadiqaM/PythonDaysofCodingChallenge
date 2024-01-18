@@ -1,0 +1,19 @@
+# Write a program to check if a number is even or odd.
+
+def check_num_even_odd(num):
+    if type(num) == int or type(num) == float:
+        if num%2==0 :
+            num_check = "Even"
+        else:
+            num_check = "Odd"
+
+        return f"{num} is {num_check}."
+    else:
+        return "Please enter a valid value - Input should be a number."
+
+# Sample function call
+print(check_num_even_odd(4.0))
+print(check_num_even_odd(24))
+print(check_num_even_odd(0))
+print(check_num_even_odd(1))
+print(check_num_even_odd("test"))
