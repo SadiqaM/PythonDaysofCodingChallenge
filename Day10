@@ -1,0 +1,13 @@
+# Write a program to remove duplicates from a list.
+
+def remove_dupe_list(input):
+    temp_list = []
+    for i in input:
+        if i not in temp_list:
+            temp_list.append(i)
+    return temp_list
+
+# Sample function call
+print(remove_dupe_list([1,2,3, 3, 4, 3, 2, 5]))
+print(remove_dupe_list(["Hello", "Hi", "Hi", "Bye", "Tyr", "Hi"]))
+print(remove_dupe_list([1,2,3, 3, 4, 3, 2, 5, "Hello", "Hi", "Hello"]))
