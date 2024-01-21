@@ -1,0 +1,17 @@
+# Write a program to print the multiplication table of a given number.
+
+def get_multiplication_table(num, limit):
+    multiple = []
+    if type(num) != int or type(limit) != int :
+        return "Please enter valid input : function accepts Integers"
+    else :
+        for i in range(1, limit+1):
+            multiple.append(i * num)
+        return f"Muliples of {num} are {multiple}"
+    
+
+# Sample function call
+print(get_multiplication_table(1, 20))
+print(get_multiplication_table(12, 20))
+print(get_multiplication_table(9, 120))
+print(get_multiplication_table("hello", 20))
