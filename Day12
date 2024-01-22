@@ -1,0 +1,17 @@
+# Write a program to reverse a given string.
+
+def reverse_string(input):
+    #return input[::-1]
+    
+    if type(input) != str:
+        return "Please enter a valid string."
+    new_string = ""
+
+    for i in range(0, len(input)):
+        new_string = input[i] + new_string
+
+    return new_string
+
+print(reverse_string("abcde"))
+print(reverse_string(1234567))
+print(reverse_string("This is a test 1."))
