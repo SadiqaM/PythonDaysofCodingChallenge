@@ -1,0 +1,41 @@
+# Write a program to print the first n numbers of a Fibonacci sequence.
+
+""" def fibonacci_sequence(limit):
+    if type(limit) != int :
+        return "The limit number should be an integer"
+    else:
+        fibonacci_sequence = []
+        if limit == 0 :
+            return fibonacci_sequence
+        for i in range(limit):
+
+            if i == 0:
+                fibonacci_sequence.append(0)
+            elif i == 1:
+                fibonacci_sequence.append(1)
+            else:
+                fibonacci_sequence.append(fibonacci_sequence[-1]+ fibonacci_sequence[-2])
+        return fibonacci_sequence """
+
+def fibonacci_number(num):
+    
+    if num in (0, 1):
+        return num
+    return fibonacci_number(num-1) + fibonacci_number(num - 2)
+    
+def fibonacci_sequence(limit):
+    if type(limit) != int :
+        return "The limit number should be an integer"
+    else:
+        fibonacci_sequence = []
+        for i in range(limit):
+            fibonacci_sequence.append(fibonacci_number(i))
+        return fibonacci_sequence
+
+# Sample function call
+print(fibonacci_sequence(0))
+print(fibonacci_sequence(1))
+print(fibonacci_sequence(2))
+print(fibonacci_sequence(10))
+print(fibonacci_sequence(25))
+print(fibonacci_sequence("test"))
