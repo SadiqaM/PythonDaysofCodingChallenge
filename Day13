@@ -1,0 +1,15 @@
+# Write a program to shuffle the elements of a list randomly.
+import random
+
+def shuffle_list(inputlist):
+    if type(inputlist) == list:
+        random.shuffle(inputlist)
+        return inputlist
+    else:
+        return "Please enter valid list as input."
+
+# Sample function call
+print(shuffle_list([1,2,3,4,5,6,7,8,9,0]))
+print(shuffle_list(["one", "two", "three","four"]))
+print(shuffle_list([1,7, "hello", "hi", 9]))
+print(shuffle_list(1))
