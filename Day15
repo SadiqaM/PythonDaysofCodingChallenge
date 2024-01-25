@@ -1,0 +1,22 @@
+# Create a program that checks if a year is a leap year.
+
+def check_leap_year(year):
+
+    """ Returns if the input year is a leap year or not.
+
+    >>> check_leap_year(2024)
+    'Year 2024 is a Leap Year.'
+    >>> check_leap_year(300)
+    'Year 300 is not a Leap Year.'
+    >>> check_leap_year(2023)
+    'Year 2023 is not a Leap Year.'
+    """
+    
+    if type(year) != int:
+        return "Input year should be a valid number."
+    else:
+        if year%4 == 0 and year%100 != 0:
+            return f"Year {year} is a Leap Year."
+        elif year%400 ==0:
+                return f"Year {year} is a Leap Year."
+        return f"Year {year} is not a Leap Year."
