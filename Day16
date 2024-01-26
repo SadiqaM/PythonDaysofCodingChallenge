@@ -1,0 +1,23 @@
+# Write a function that counts the frequency of each word in a sentence.
+
+def count_word_frequency(input_string, ignore_case = False):
+    """ Returns if the number of times word exists in the input_string.
+    input_string : Valid string
+    ignore_case : flag to ignore the case during word search. True or False; defaults to False
+
+    >>> count_word_frequency("Hi This is me, Hi Hi Hi")
+    {'Hi': 4, 'This': 1, 'is': 1, 'me,': 1}
+    >>> count_word_frequency("No duplicates here")
+    {'No': 1, 'duplicates': 1, 'here': 1}
+    >>> count_word_frequency("This is this IS the tHis Is", True)
+    {'this': 3, 'is': 3, 'the': 1}
+    """
+    if ignore_case:
+        input_string = input_string.lower()
+    word_list = input_string.split(" ")
+    word_count = {}
+    for word in word_list:
+        if word not in word_count:
+            word_count[word] = word_list.count(word)
+            
+    return word_count
