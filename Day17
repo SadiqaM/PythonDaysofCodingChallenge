@@ -1,0 +1,19 @@
+# Create a program that capitalizes the first letter of each word in a sentence
+
+#method 1
+import string
+def capitalize_first_word(input_string):
+    return input_string.title()
+    #return string.capwords(input_string)
+
+#method 2
+import string
+def capitalize_first_word2(input_string):
+    new_string = ""
+    word_list = input_string.split(" ")
+    for word in word_list:
+        new_string = new_string + word.capitalize()
+    return string.capwords(input_string)
+
+print(capitalize_first_word("Test this 'string"))
+print(capitalize_first_word2("Test this string"))
