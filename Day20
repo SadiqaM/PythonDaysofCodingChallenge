@@ -1,0 +1,23 @@
+# Write a function that takes a list of numbers and returns a new list containing only the even numbers.
+def filter_evens(input_list):
+    """ This function returns list of evens from the input list
+    >>> filter_evens([1,2,4,5,6])
+    [2,4,6]
+    
+    >>> filter_evens([0,1,2,4,5,6])
+    [2,4,6]
+    
+    >>> filter_evens(["Hello", 1,2,4,5,6, 8, 100, "198"])
+    [2,4,6,8,100]
+    """
+    list_evens = []
+    if len(input_list) < 1:
+        return "Please enter a valid list of numbers."
+    for num in input_list:
+        if type(num) == int and num%2==0:
+            list_evens.append(num)
+    
+    return list_evens
+
+print(filter_evens(["Hello", 1,2,4,5,6, 8, 100, "198"]))
+print(filter_evens([0,1,2,4,5,6]))
