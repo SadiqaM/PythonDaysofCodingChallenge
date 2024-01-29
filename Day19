@@ -10,7 +10,7 @@ def factorial(num):
     Please enter valid positive integer
 
     """
-    if type(num) != int or num <= 0:
+    if type(num) != int or num < 0:
         return "Please enter valid positive integer" 
     elif num > 1:
         return num * factorial(num - 1)
