@@ -1,8 +1,11 @@
 # Create a program to remove a specific element from a set.
 
 def remove_element(input_set, element):
-    input_set.remove(element)
-    return input_set
+    if element in input_set:
+        input_set.remove(element)
+        return input_set
+    else:
+        return f"{element} doesn't exist in the input set {input_set}"
 
 print(remove_element({1, 2, 4, 5}, 5))
 print(remove_element({"test", "this", "code", "today."}, "this"))
