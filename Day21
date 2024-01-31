@@ -1,0 +1,8 @@
+# Create a program to remove a specific element from a set.
+
+def remove_element(input_set, element):
+    input_set.remove(element)
+    return input_set
+
+print(remove_element({1, 2, 4, 5}, 5))
+print(remove_element({"test", "this", "code", "today."}, "this"))
