@@ -1,0 +1,20 @@
+# Create a program to find the second-largest element in a list.
+def second_largest_element(input_list):
+    input_list.sort(reverse=True)
+    return input_list[1]
+
+print(second_largest_element([1,5,3,15,6,11]))
+
+def second_largest_element1(input_list):
+    temp_element = 0
+    for i in range(0, len(input_list)):
+        if temp_element > input_list[i]:
+            small_num= input_list[i]
+        else:
+            small_num= temp_element
+            temp_element = input_list[i]
+
+
+    return small_num
+
+print(second_largest_element1([1,5,3,15,6,11]))
