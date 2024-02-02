@@ -1,0 +1,22 @@
+# Write a program that checks if a key exists in a dictionary.
+
+def check_dict_key(input_dict, key):
+    """function cheks if a key exists in a dictionary
+    >>> print(check_dict_key({"a": 1, "c": 3}, "b"))
+    a found in the dictionary.
+    print(check_dict_key({"a": 1, "c": 3}, "b"))
+    b not found in the dictionary.
+    print(check_dict_key({"a": 1, "c": 3}, "b"))
+    Please enter a valid dictionary.
+    """
+    if type(input_dict) == dict:
+        if key in input_dict:
+            return f"{key} found in the dictionary."
+        else:
+            return f"{key} not found in the dictionary."
+    else:
+        return "Please enter a valid dictionary."
+
+print(check_dict_key({"a": 1, "c": 3}, "a"))
+print(check_dict_key({"a": 1, "c": 3}, "b"))
+print(check_dict_key([{"a": 1, "c": 3}], "b"))
