@@ -1,0 +1,32 @@
+# Create a program to concatenate two lists.
+
+def concatenate_lists(input_list1, input_list2):
+    """ function concantenates two Lists
+    >>> concatenate_lists([1,2,3], [3,4,5])
+    [1,2,3,3,4,5]
+    >>> concatenate_lists(["s", "t", "u"], ["a","e","i","o","u"])
+    """
+    if type(input_list1) == list and type(input_list2) == list:
+        input_list1.extend(input_list2)
+        return input_list1
+    else:
+        return "Please enter valid list"
+    
+print(concatenate_lists([1,2,3], [3,4,5]))
+print(concatenate_lists(["s", "t", "u"], ["a","e","i","o","u"]))
+
+def concatenate_lists1(input_list1, input_list2):
+    """ function concantenates two Lists
+    >>> concatenate_lists1([1,2,3], [3,4,5])
+    [1,2,3,3,4,5]
+    >>> concatenate_lists1(["s", "t", "u"], ["a","e","i","o","u"])
+    """
+    if type(input_list1) == list and type(input_list2) == list:
+        for item in input_list2:
+            input_list1.append(item)
+        return input_list1
+    else:
+        return "Please enter valid list"
+    
+print(concatenate_lists1([1,2,3], [3,4,5]))
+print(concatenate_lists1(["s", "t", "u"], ["a","e","i","o","u"]))
