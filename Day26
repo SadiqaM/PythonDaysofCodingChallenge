@@ -1,0 +1,7 @@
+# Create a program that uses a lambda function to square each element of a list.
+
+def squares(input_list):
+    squares = list(map(lambda x: (x * x), input_list))
+    return squares
+
+print(squares([1,2,3,4,5]))
