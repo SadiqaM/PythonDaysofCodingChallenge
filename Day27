@@ -1,0 +1,7 @@
+# Create a program that sorts a list of strings alphabetically.
+
+def sort_list_strings(input_list):
+    #input_list.sort()
+    return sorted(input_list)
+
+print(sort_list_strings(["a", "A", "b", "C", "d", "D"]))
