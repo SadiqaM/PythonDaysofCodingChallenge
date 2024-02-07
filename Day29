@@ -1,0 +1,12 @@
+# Create a function that generates a random number between a given range.
+def generate_random_num(num1, num2):
+
+    if num1 > num2 :
+        random_num = random.randint(int(num2) , int(num1))
+    else:
+        random_num = random.randint(int(num1), int(num2))
+
+    return  random_num
+
+print(generate_random_num(1.60,36.7))
+print(generate_random_num(0,-980))
