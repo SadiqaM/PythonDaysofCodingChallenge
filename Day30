@@ -1,0 +1,10 @@
+# Create a function that finds the second smallest element in a list.
+def second_smallest_element(input_list):
+    """ returns the second smallest element in the input_list
+    >>>second_smallest_element([2,5,8,1,0])
+    1
+    >>>second_smallest_element(["Hello", "Hi", "Ola", "Salam", "Namaste"])
+    Hi
+    """
+    return sorted(input_list)[1]
+print(second_smallest_element(["Hello", "Hi", "Ola", "Salam", "Namaste"]))
