@@ -1,0 +1,19 @@
+# Create a function that calculates the average of a list of numbers
+def avg_list(input_list):
+    #print(type(input_list))
+    #return sum(input_list)/len(input_list)
+    total = 0
+    counter = 0
+    for i in input_list:
+        if type(i) == int :
+            total += i
+            counter += 1
+    if counter == 0:
+        return f"{input_list} contains no numbers. Please enter a list on numbers."
+    else:
+        return f"Average of the numbers in the list is {total/counter}"
+
+
+print(avg_list([2,4,6]))
+print(avg_list(["a", "b", "c"]))
+print(avg_list([2,4,6, "b"]))
