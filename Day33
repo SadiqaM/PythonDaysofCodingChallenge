@@ -2,7 +2,7 @@
 def check_prime_number(int_num):
     prime_flag = True
     if type(int_num) == int:
-        for i in range(2, int_num-1):
+        for i in range(2, int_num):
             if int_num%i == 0:
                 prime_flag = False
                 break
