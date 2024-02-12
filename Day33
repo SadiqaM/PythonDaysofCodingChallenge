@@ -1,0 +1,20 @@
+ # Write a test case for a function that checks if a number is prime
+def check_prime_number(int_num):
+    prime_flag = True
+    if type(int_num) == int:
+        for i in range(2, int_num-1):
+            if int_num%i == 0:
+                prime_flag = False
+                break
+        if prime_flag :
+            return f"Number {int_num} is a prime number."
+        else:
+            return f"Number {int_num} is not a prime number."
+    else:
+        return "Please enter a valid number."
+
+print(check_prime_number(2))
+print(check_prime_number(0))
+print(check_prime_number(13))
+print(check_prime_number(12))
+print(check_prime_number(591))
