@@ -1,0 +1,7 @@
+# Write a Python program to merge two dictionaries
+def merge_dict(input_dict1, input_dict2):
+    input_dict1 |= input_dict2
+    return input_dict1
+
+print(merge_dict({"one": 1}, {"two":2}))
+print(merge_dict({"one": [1,2]}, {"two":[2,3], "one": 1}))
