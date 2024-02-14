@@ -1,0 +1,16 @@
+# Write a simple unit test for a function that adds two numbers
+import unittest
+
+def add_numbers(num1, num2):
+    return num1 + num2
+
+class TestAdd(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add_numbers(1, 2), 3)
+        self.assertEqual(add_numbers(-1, 2), 1)
+        self.assertEqual(add_numbers(-1, -2), -3)
+        self.assertEqual(add_numbers(.08, .02), .10)
+        self.assertEqual(add_numbers(.8, .2), 1)
+
+if __name__ == '__main__':
+    unittest.main()
