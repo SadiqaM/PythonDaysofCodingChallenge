@@ -1,0 +1,11 @@
+# Write a program to iterate through a dictionary and print its keys and values
+def print_dict_key_value(input_dict):
+    if type(input_dict) == dict:
+        #for key in input_dict:
+        #    print(f"{key} : {input_dict[key]}")
+        for key,value in input_dict.items():
+            print(f"{key} : {value}")
+    else:
+        print("Please enter valid dictionary.")
+
+print_dict_key_value({"one":1, "two":2, "three":3})
