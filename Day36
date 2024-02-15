@@ -1,0 +1,20 @@
+# Write a Python program to check if two strings are anagrams
+
+def check_anagrams(string1, string2):
+    anagram_flag = False
+    if type(string1) == str and type(string2) == str:
+        if len(string1) == len(string2):
+            if sorted(string1.lower()) == sorted(string2.lower()):
+                anagram_flag = True
+    else:
+        return "Input accepts only Strings, Please enter valid strings."
+    
+    if anagram_flag:
+        return f"{string1} and {string2} are anagrams."
+    else:
+        return f"{string1} and {string2} are not anagrams."
+            
+print(check_anagrams(345, "543"))
+print(check_anagrams("345", "543"))
+print(check_anagrams("Dish", "Fish"))
+print(check_anagrams("care", "Race"))
