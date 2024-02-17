@@ -1,0 +1,10 @@
+# Write a program to flatten a nested list
+def flatten_list(nested_list):
+    if type(nested_list) == list:
+        flattened_list = []
+        for row in nested_list:
+            flattened_list.extend(row)
+        return flattened_list
+    else:
+        return "Please enter valid list."
+print(flatten_list([[[1,2,3],2],[2,3],[3,4]]))
