@@ -1,0 +1,31 @@
+# Write a program to find the most common words in a text file
+
+# function parameter file_path : Path of the txt file to read
+# function returns a dictionary object key = words in the txt file and value is the count of each word in the file 
+def get_word_count_text_file(file_path):
+    words = []
+    word_count = {}
+    with open(file_path) as file:
+        lines = file.readlines()
+        file.close()
+
+    for line in lines:
+        line = line.strip().replace(":","").replace(",","").replace(";","")
+        words_line = line.split(" ")
+        words.extend(words_line)
+    
+    for word in words:
+        count = words.count(word)
+        if word not in word_count:
+            word_count[word] = count
+
+    return word_count
+
+# function takes a dictionary object as input and retruns the 1st n high frequency words (common words)
+def return_common_words(dict_words,n):
+
+    sorted_dict = sorted(dict_words.items(), key=lambda x:x[1], reverse=True)
+    if n > len(sorted_dict):
+        return sorted_dict
+    else:
+        return sorted_dict[:n]
