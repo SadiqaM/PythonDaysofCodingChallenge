@@ -1,0 +1,7 @@
+# Write a program that removes all whitespaces from a given string
+
+def remove_whitespace(string):
+    #return string.replace(" ", "")
+    return "".join(string.split())
+
+print(remove_whitespace(" This is    the test ,.     \n"))
