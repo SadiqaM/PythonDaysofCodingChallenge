@@ -1,1 +1,12 @@
 # Write a program that uses recursion to generate all permutations of a list
+
+def list_permutation(input_list, index=0):
+    if index >= len(input_list):
+        print(input_list)
+    else:
+        for i in range(index, len(input_list)):
+            input_list[index], input_list[i] = input_list[i], input_list[index]
+            list_permutation(input_list, index+1)
+            input_list[index], input_list[i] = input_list[i], input_list[index]
+
+list_permutation([1,2,3,4,5])
