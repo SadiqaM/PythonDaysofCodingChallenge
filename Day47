@@ -1,0 +1,6 @@
+# Create a program that imports the math module and uses its functions
+import math
+def using_math_module(num):
+    # return dictonary of math functions
+    return {"factorial" : math.factorial(num), "squareroot" : math.isqrt(num), "remainder_2": math.remainder(num, 2), "log": math.log10(num)}
+print(using_math_module(4))
