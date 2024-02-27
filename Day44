@@ -1,0 +1,9 @@
+# Write a program that reads an integer from the user and handles invalid inputs
+def check_input_int():
+    user_input = input("Please enter a valid number.")
+    try:
+        if int(user_input):
+            return "Great Job!! The user followed instruction and entered integer."
+    except:
+        return f"Opps!!!! user did not enter a number."
+print(check_input_int())
