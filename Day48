@@ -1,0 +1,12 @@
+# Create a program that replaces specific words in a text with their synonym
+def replace_word(sentence, word_to_replace, word_to_replace_with):
+    words = sentence.lower().split()
+    if word_to_replace.lower() in words:
+        words = [word if word != word_to_replace else word_to_replace_with for word in words]
+        #return sentence.replace(word_to_replace, word_to_replace_with)
+        return " ".join(words)
+    else:
+        return f"{word_to_replace} not found in '{sentence}'"
+    
+print(replace_word("word Test replacing word", "word", "term"))
+print(replace_word("Test replacing word", "replacing", "altering"))
