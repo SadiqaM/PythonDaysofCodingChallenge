@@ -1,0 +1,21 @@
+# Write a function to check if a given list is sorted
+def check_list_sorted(input_list):
+    if input_list == sorted(input_list) or input_list == sorted(input_list, reverse=True):
+        return f"Given list {input_list} is sorted by default."
+    else: 
+        return f"Given list {input_list} is Not sorted by default."
+
+def check_list_sorted2(input_list):
+    #if input_list == sorted(input_list) or input_list == sorted(input_list, reverse=True):
+    if(all(input_list[i] <= input_list[i + 1] for i in range(len(input_list)-1))):
+        return f"Given list {input_list} is sorted by default."
+    elif(all(input_list[i] >= input_list[i + 1] for i in range(len(input_list)-1))):
+        return f"Given list {input_list} is sorted by default."
+    else: 
+        return f"Given list {input_list} is Not sorted by default."   
+print(check_list_sorted2([1,2,3,4,5,6]))
+print(check_list_sorted2([10,2,13,4,58,-6]))
+print(check_list_sorted2([61,52,43,34,25,16]))
+print(check_list_sorted([1,2,3,4,5,6]))
+print(check_list_sorted([10,2,13,4,58,-6]))
+print(check_list_sorted([61,52,43,34,25,16]))
