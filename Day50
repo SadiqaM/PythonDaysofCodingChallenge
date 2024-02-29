@@ -1,0 +1,12 @@
+# Create a program that finds the intersection and union of two sets
+def union_sets(set_a, set_b):
+    return set_a | set_b
+def intersection_set(set_a, set_b):
+    return set_a & set_b
+
+set_a = {"a","b","c","d","e"}
+set_b = {"d","e","f","g","h","i"}
+print(union_sets(set_a, set_b))
+print(intersection_set(set_a, set_b))
+print(set_a.union(set_b))
+print(set_a.intersection(set_b))
