@@ -1,4 +1,5 @@
 # Write a program to find the most common words in a text file
+# Create a program that counts the occurrences of each word in a text file
 
 # function parameter file_path : Path of the txt file to read
 # function returns a dictionary object key = words in the txt file and value is the count of each word in the file 
