@@ -1,0 +1,15 @@
+# Create a program that checks if a string is a palindrome
+def check_palindrome(input_str):
+    #if type(input_str) == str:
+    try:
+        input_str = input_str.lower()
+        if input_str == input_str[ ::-1]:
+            return f"{input_str} is a palindrome."
+        else:
+            return f"{input_str} is not a palindrome."
+    except (TypeError, AttributeError):
+        return f"{input_str} is not a string."
+    
+    
+print(check_palindrome("Racecar"))
+print(check_palindrome("101"))
