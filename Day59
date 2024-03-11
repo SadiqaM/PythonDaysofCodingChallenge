@@ -1,0 +1,12 @@
+# Create a function that checks if a number is a perfect square
+def check_perfect_square(int_num):
+    if type(int_num) == int:
+        if int(math.sqrt(int_num)) ** 2 == int_num:
+            return f"{int_num} is a perfect square."
+        else:
+            return f"{int_num} is a not perfect square."
+    else:
+        return "Please enter valid integer"
+    
+print(check_perfect_square(49))
+print(check_perfect_square(5))
