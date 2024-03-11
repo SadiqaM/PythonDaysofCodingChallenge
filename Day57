@@ -1,0 +1,17 @@
+# Create a function that returns the key with the maximum value in a dictionary
+def max_val_dict(input_dict):
+    '''
+    try: 
+        return max(input_dict, key=input_dict.get)
+    except (ValueError, AttributeError) as e:
+        return e
+    '''
+    keys = list(input_dict.keys())
+    values = list(input_dict.values())
+    print(list(values))
+    max_val = max(list(values))
+    print(max_val)
+    i = values.index(max_val)
+    return keys[i]
+    
+print(max_val_dict({'eggs': 2, 'sausage': 1, 'bacon': 1, 'spam': 500}))
