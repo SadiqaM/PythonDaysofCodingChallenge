@@ -1,0 +1,10 @@
+# Create a function that converts a string to an integer and handles ValueError
+def convert_str_to_int(str_num):
+    try:
+        return int(str_num)
+    except ValueError as e:
+        return f"Error:: {e}"
+
+print(convert_str_to_int("99"))
+print(convert_str_to_int(9))
+print(convert_str_to_int("this"))
