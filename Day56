@@ -1,0 +1,9 @@
+# Create a function to extract all URLs from a given text using regular expressions
+def extract_url(string):
+    try:
+        regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
+        url = re.findall(regex, string)
+        return [x[0] for x in url] 
+    except Exception as e:
+        return f"Error :: {e}"
+print(extract_url("Hello, you can use the following URL for testing: https://netskopesecuritycheck.com/ Maybe also useful for you: https://www.netskope.com/url-lookup Kind regards"))
